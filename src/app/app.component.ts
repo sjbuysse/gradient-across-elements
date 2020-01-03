@@ -64,6 +64,10 @@ export class AppComponent implements AfterViewInit, OnDestroy {
     this.createOverlappingGradient();
   }
 
+  ngOnDestroy(): void {
+    // destroy Multiple instances here properly, see documentation
+  }
+
   getDayClass(day: Day): string {
     return day.stripes ? `day stripes-${day.requestID}` : 'day';
   }
